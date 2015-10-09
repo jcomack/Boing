@@ -1,6 +1,8 @@
 ### Linux template
 *~
 
+/logs
+
 # KDE directory preferences
 .directory
 

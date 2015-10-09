@@ -1,5 +1,7 @@
 <?php namespace jcomack\Boing\Client;
 
+use Psr\Http\Message\StreamInterface;
+
 /**
  * Class Request
  * @package jcomack\Boing\Client
@@ -7,16 +9,20 @@
 class Request
 {
     protected $headers = [];
-    protected $body = [];
+
+    /** @var string|resource|StreamInterface */
+    protected $body = null;
 
     /**
      * @var string
      */
     private $method;
+    private $uri;
 
-    public function __construct($method = 'GET')
+    public function __construct($uri, $method = 'GET')
     {
         $this->method = $method;
+        $this->uri = $uri;
     }
 
     public function header($header, $value)
@@ -41,9 +47,14 @@ class Request
 
     public function body($content)
     {
-        $this->body['body'] = $content;
+        $this->body = $content;
         
         return $this;
+    }
+
+    public function build()
+    {
+        return new \GuzzleHttp\Psr7\Request(strtoupper($this->method), $this->uri, $this->headers, $this->body);
     }
 
 }
