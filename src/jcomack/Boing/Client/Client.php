@@ -46,6 +46,8 @@ class Client
 
     public function send($uri, $method = 'GET')
     {
-        return new Response($this->client->request($method, $uri));
+        $request = new Request($uri, $method);
+
+        return new Response($this->client->send($request->build()));
     }
 }
