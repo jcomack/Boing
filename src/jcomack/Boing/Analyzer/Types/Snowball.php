@@ -1,10 +1,10 @@
 <?php namespace jcomack\Boing\Analyzer\Types;
 
 /**
- * Class Stop
+ * Class Snowball
  * @package jcomack\Boing\Analyzer\Types
  */
-class Stop extends Type implements AnalyzerType
+class Snowball extends Type implements AnalyzerType
 {
     /**
      * Define the settings of the analyzer
@@ -14,8 +14,7 @@ class Stop extends Type implements AnalyzerType
     public function settings()
     {
         $this->settings = [
-            'stopwords' => ['string|array', '_english_'],
-            'stopwords_path' => 'string',
+            'language' => ['string', 'English'],
         ];
     }
 }
