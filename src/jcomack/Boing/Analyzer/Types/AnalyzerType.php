@@ -11,19 +11,19 @@ interface AnalyzerType
      *
      * @return string
      */
-    public function analyzerName();
+    public function name();
 
     /**
      * Return the type of the analyzer
      *
      * @return string
      */
-    public function analyzerType();
+    public function type();
 
     /**
      * Define the settings of the analyzer
      *
      * @return array
      */
-    public function availableSettings();
+    public function settings();
 }

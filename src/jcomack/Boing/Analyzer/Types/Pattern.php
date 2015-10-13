@@ -1,10 +1,10 @@
 <?php namespace jcomack\Boing\Analyzer\Types;
 
 /**
- * Class Stop
+ * Class Pattern
  * @package jcomack\Boing\Analyzer\Types
  */
-class Stop extends Type implements AnalyzerType
+class Pattern extends Type
 {
     /**
      * Define the settings of the analyzer
@@ -14,8 +14,10 @@ class Stop extends Type implements AnalyzerType
     public function settings()
     {
         $this->settings = [
-            'stopwords' => ['string|array', '_english_'],
-            'stopwords_path' => 'string',
+            'lowercase' => ['boolean', true],
+            'pattern' => ['string', '\\W+'],
+            'flags' => ['string', ''],
+            'stopwords' => [ 'string|array', '[]' ],
         ];
     }
 }
