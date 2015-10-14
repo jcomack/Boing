@@ -2,6 +2,7 @@
 *~
 
 /logs
+/public_html/usage
 
 # KDE directory preferences
 .directory
