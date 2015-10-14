@@ -1,14 +1,19 @@
 {
-    "name": "jcomack/boing",
-    "description": "An ElasticSearch wrapper for PHP",
-    "require": {
-        "guzzlehttp/guzzle": "^6.1"
-    },
-    "authors": [
-        {
-            "name": "Jimmy Comack",
-            "email": "jimcom89@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "jcomack/boing",
+  "description": "An ElasticSearch wrapper for PHP",
+  "require": {
+    "guzzlehttp/guzzle": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Boing\\": "src/jcomack/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jimmy Comack",
+      "email": "jimcom89@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
 }

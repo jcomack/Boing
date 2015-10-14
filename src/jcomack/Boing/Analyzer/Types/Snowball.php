@@ -17,4 +17,14 @@ class Snowball extends Type implements AnalyzerType
             'language' => ['string', 'English'],
         ];
     }
+
+    public function output()
+    {
+        echo "Test";
+
+        foreach ($this->settings as $key => $setting) {
+            var_dump($key, $setting);
+        }
+
+    }
 }

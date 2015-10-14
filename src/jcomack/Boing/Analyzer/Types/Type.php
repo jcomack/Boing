@@ -40,8 +40,13 @@ abstract class Type
         $this->settings = [];
     }
 
-    protected function tokenizer()
+    public function output()
     {
+        echo "Test";
+
+        foreach ($this->settings as $key => $setting) {
+            var_dump($key, $setting);
+        }
 
     }
 }

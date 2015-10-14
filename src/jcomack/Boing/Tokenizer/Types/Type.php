@@ -40,4 +40,11 @@ abstract class Type
         $this->settings = [];
     }
 
+    public function output()
+    {
+        foreach ($this->settings as $key => $setting) {
+            var_dump($key, $setting);
+        }
+
+    }
 }
