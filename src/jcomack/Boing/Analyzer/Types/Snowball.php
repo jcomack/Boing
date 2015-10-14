@@ -17,7 +17,6 @@ class Snowball extends Type implements AnalyzerType
             'language' => ['string', 'English'],
         ];
     }
-
     public function output()
     {
         echo "Test";

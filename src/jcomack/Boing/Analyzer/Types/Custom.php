@@ -9,6 +9,7 @@ use jcomack\Boing\Utilities;
  * Class Custom
  * @package jcomack\Boing\Analyzer\Types
  */
+
 class Custom extends Type
 {
     /**
